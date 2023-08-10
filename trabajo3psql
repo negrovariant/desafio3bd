@@ -50,7 +50,8 @@ id
 
 **paso 4 
 
-Listar a todos los actores que aparecen en la película "Titanic".
+
+genmerar una lista de todos los actores de "Titanic".
 
 
 SELECT actor AS actores FROM reparto WHERE pelicula_id = (SELECT id FROM peliculas WHERE peliculas ='Titanic');
@@ -74,7 +75,7 @@ Suzy Amis
 (13 filas)
 
 **paso 5 
-Consultar en cuántas películas del top 100 participa Harrison Ford.
+Generar la consunta sobre cuantas peliculas  aparece Harrison Ford
 
 
 SELECT COUNT(pelicula_id) AS total_peliculas_de_Harrison_Ford FROM reparto WHERE actor = 'Harrison Ford';
@@ -88,8 +89,8 @@ total_peliculas_de_harrison_ford
 
 **paso 6 
 
-Indicar las películas estrenadas entre los años 1990 y 1999 ordenadas por título de manera ascendente.
 
+generar una lista de los estrenos entre 1990 y 1999, ordenadas por el titulo de manera ascendente, osea, en orden alfabetico.
 
 SELECT * FROM peliculas WHERE año_estreno BETWEEN 1990 AND 1999 ORDER BY peliculas ASC;
 
@@ -129,7 +130,9 @@ id |                 peliculas                  | año_estreno |       director
  98 | Uno de los nuestros                        |        1990 | Martin Scorsese
 (30 filas)
 
-**paso 7 Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser nombrado para la consulta como “longitud_titulo”.
+**paso 7 
+
+consultar los titulos de las peliculas con su longitud,donde la misma anterior, debe ir con el nombre "longitud_titulo"
 
 SELECT peliculas, LENGTH(peliculas) longitud_titulo FROM peliculas;
 
